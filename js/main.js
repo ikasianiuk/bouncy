@@ -1,4 +1,11 @@
 (function($){
+		
+    $('.main-banner__menu-item, .main-banner__scroll').on('click', function(event){ 
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+    });
+	
+		
     $(window).on('load', function(){
         var map;
         var beetroot = {lat: 49.5685276, lng: 34.5854317};
